@@ -1,0 +1,47 @@
+{
+  "Fractions Forest": {
+    "story": "You arrive at the Fractions Forest where a wise Pie Guardian needs help sharing enchanted pies fairly among forest friends.",
+    "learning_objectives": [
+      "Understand proper and improper fractions",
+      "Add and subtract fractions with like denominators",
+      "Simplify fraction results"
+    ],
+    "example_walkthrough": "The Pie Guardian shows two pies cut into fourths. Combining one half and one quarter requires matching denominators before adding."
+  },
+  "Decimal Desert": {
+    "story": "The Decimal Desert's oasis lights only when explorers measure water exactly using decimals.",
+    "learning_objectives": [
+      "Compare and order decimals",
+      "Add and subtract decimals up to thousandths",
+      "Convert between fractions and decimals"
+    ],
+    "example_walkthrough": "An oasis merchant explains that 0.5 liters plus 0.25 liters gives 0.75 liters when lining up decimal points."
+  },
+  "Geometry Galaxy": {
+    "story": "In Geometry Galaxy, you pilot a star cruiser and calculate angles and shapes to chart safe routes between constellations.",
+    "learning_objectives": [
+      "Classify triangles and quadrilaterals",
+      "Calculate perimeter and area of basic shapes",
+      "Understand angle sums in polygons"
+    ],
+    "example_walkthrough": "A navigation droid demonstrates that the interior angles of a triangle always add up to 180 degrees for plotting warp jumps."
+  },
+  "Measurement Mountain": {
+    "story": "Climb Measurement Mountain by packing the right units to survive different climate zones.",
+    "learning_objectives": [
+      "Convert between metric units",
+      "Estimate measurements in real-world contexts",
+      "Interpret data from tables and charts"
+    ],
+    "example_walkthrough": "A mountaineer guide converts 2.5 kilometers to 2,500 meters to map the path to the next camp."
+  },
+  "Word Problem World": {
+    "story": "Word Problem World is filled with storytellers who turn daily adventures into math puzzles.",
+    "learning_objectives": [
+      "Identify key information in multi-step problems",
+      "Model real-life scenarios with equations",
+      "Check answers for reasonableness"
+    ],
+    "example_walkthrough": "A villager describes buying supplies with discounts, guiding you to set up and solve equations to find totals."
+  }
+}

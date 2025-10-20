@@ -1,0 +1,28 @@
+{
+  "active_slot": "Slot 1",
+  "slots": {
+    "Slot 1": {
+      "player_name": "grammar",
+      "level": 1,
+      "xp": 50,
+      "badges": [
+        "Fractions Forest Master"
+      ],
+      "unlocked_lands": [
+        "Fractions Forest",
+        "Decimal Desert"
+      ],
+      "hint_tokens": {
+        "Fractions Forest": 3,
+        "Decimal Desert": 3,
+        "Geometry Galaxy": 3,
+        "Measurement Mountain": 3,
+        "Word Problem World": 3
+      },
+      "last_hint_reset": "2025-10-20",
+      "avatar": "\ud83d\udef0\ufe0f Geometry Navigator"
+    },
+    "Slot 2": null,
+    "Slot 3": null
+  }
+}

@@ -1,0 +1,532 @@
+{
+  "Fractions Forest": [
+    {
+      "creature": "Pie Guardian",
+      "prompt": "What is 1/2 + 1/4?",
+      "options": {
+        "a": "1/4",
+        "b": "2/4",
+        "c": "3/4",
+        "d": "1"
+      },
+      "answer": "c",
+      "explanation": "Convert both fractions to fourths: 1/2 = 2/4, so 2/4 + 1/4 = 3/4.",
+      "hint": "Match denominators before adding."
+    },
+    {
+      "creature": "Branch Balancer",
+      "prompt": "Simplify the fraction 6/8.",
+      "options": {
+        "a": "3/4",
+        "b": "4/6",
+        "c": "5/8",
+        "d": "6/10"
+      },
+      "answer": "a",
+      "explanation": "Divide numerator and denominator by their greatest common factor 2: 6/8 = 3/4.",
+      "hint": "Look for a common factor."
+    },
+    {
+      "creature": "Fraction Fox",
+      "prompt": "What is 3/5 - 1/5?",
+      "options": {
+        "a": "1/5",
+        "b": "2/5",
+        "c": "3/5",
+        "d": "4/5"
+      },
+      "answer": "b",
+      "explanation": "Subtract numerators when denominators match: 3 - 1 = 2, so 2/5.",
+      "hint": "Keep the denominator the same."
+    },
+    {
+      "creature": "River Sprite",
+      "prompt": "Which fraction is equivalent to 4/6?",
+      "options": {
+        "a": "2/3",
+        "b": "3/4",
+        "c": "6/9",
+        "d": "8/12"
+      },
+      "answer": "a",
+      "explanation": "Divide numerator and denominator by 2: 4/6 = 2/3.",
+      "hint": "Try simplifying 4/6 first."
+    },
+    {
+      "creature": "Leaf Sprite",
+      "prompt": "Add 2/3 and 1/3.",
+      "options": {
+        "a": "1/3",
+        "b": "2/3",
+        "c": "3/3",
+        "d": "4/3"
+      },
+      "answer": "c",
+      "explanation": "Same denominators: 2 + 1 = 3, so 3/3 = 1 whole.",
+      "hint": "Combine the numerators."
+    },
+    {
+      "creature": "Moss Minstrel",
+      "prompt": "Which fraction is greater: 2/3 or 3/5?",
+      "options": {
+        "a": "2/3",
+        "b": "3/5",
+        "c": "They are equal",
+        "d": "1/2"
+      },
+      "answer": "a",
+      "explanation": "Common denominator 15 gives 10/15 vs 9/15, so 2/3 is larger.",
+      "hint": "Compare using matching denominators."
+    },
+    {
+      "creature": "Canopy Sage",
+      "prompt": "What is 1 1/4 + 2 3/4?",
+      "options": {
+        "a": "3",
+        "b": "3 1/2",
+        "c": "4",
+        "d": "4 1/4"
+      },
+      "answer": "c",
+      "explanation": "Convert to improper fractions: 5/4 + 11/4 = 16/4 = 4.",
+      "hint": "Add the fractional parts first, then whole numbers."
+    },
+    {
+      "creature": "Grove Guardian",
+      "prompt": "A cake is cut into 8 equal slices and 3 are eaten. What fraction of the cake remains?",
+      "options": {
+        "a": "3/8",
+        "b": "4/8",
+        "c": "5/8",
+        "d": "6/8"
+      },
+      "answer": "c",
+      "explanation": "Five slices remain out of eight total, so 5/8 remains.",
+      "hint": "Subtract the eaten slices from the total pieces."
+    }
+  ],
+  "Decimal Desert": [
+    {
+      "creature": "Oasis Owl",
+      "prompt": "What is 0.4 + 0.35?",
+      "options": {
+        "a": "0.45",
+        "b": "0.7",
+        "c": "0.75",
+        "d": "0.8"
+      },
+      "answer": "c",
+      "explanation": "Align decimal points: 0.40 + 0.35 = 0.75.",
+      "hint": "Add hundredths and tenths carefully."
+    },
+    {
+      "creature": "Sand Serpent",
+      "prompt": "Which decimal is greater: 0.62 or 0.602?",
+      "options": {
+        "a": "0.62",
+        "b": "0.602",
+        "c": "They are equal",
+        "d": "Cannot compare"
+      },
+      "answer": "a",
+      "explanation": "0.62 = 0.620 which is greater than 0.602.",
+      "hint": "Rewrite both decimals with three digits."
+    },
+    {
+      "creature": "Mirage Genie",
+      "prompt": "Convert the fraction 3/4 to a decimal.",
+      "options": {
+        "a": "0.25",
+        "b": "0.5",
+        "c": "0.75",
+        "d": "1.25"
+      },
+      "answer": "c",
+      "explanation": "3 divided by 4 equals 0.75.",
+      "hint": "Think of quarters of one whole."
+    },
+    {
+      "creature": "Compass Camel",
+      "prompt": "Subtract 2.5 - 0.85.",
+      "options": {
+        "a": "1.65",
+        "b": "1.75",
+        "c": "1.85",
+        "d": "1.95"
+      },
+      "answer": "b",
+      "explanation": "Line up decimals: 2.50 - 0.85 = 1.65.",
+      "hint": "Borrow using hundredths if needed."
+    },
+    {
+      "creature": "Dune Spirit",
+      "prompt": "Round 5.768 to the nearest tenth.",
+      "options": {
+        "a": "5.7",
+        "b": "5.8",
+        "c": "5.76",
+        "d": "5.77"
+      },
+      "answer": "b",
+      "explanation": "Look at the hundredths digit (6); round tenths up from 7 to 8.",
+      "hint": "Check the digit to the right of the tenths place."
+    },
+    {
+      "creature": "Quartz Quokka",
+      "prompt": "What is 0.8 × 0.5?",
+      "options": {
+        "a": "0.04",
+        "b": "0.4",
+        "c": "0.8",
+        "d": "4"
+      },
+      "answer": "b",
+      "explanation": "Multiply 8 tenths by 5 tenths to get 40 hundredths, or 0.40.",
+      "hint": "Multiply as whole numbers, then place the decimal."
+    },
+    {
+      "creature": "Circuit Coyote",
+      "prompt": "Find 3.6 ÷ 0.3.",
+      "options": {
+        "a": "10",
+        "b": "11",
+        "c": "12",
+        "d": "13"
+      },
+      "answer": "c",
+      "explanation": "Move the decimal in both numbers: 36 ÷ 3 = 12.",
+      "hint": "Multiply both dividend and divisor by 10 first."
+    },
+    {
+      "creature": "Lantern Lizard",
+      "prompt": "Which digit is in the hundredths place of 5.783?",
+      "options": {
+        "a": "5",
+        "b": "7",
+        "c": "8",
+        "d": "3"
+      },
+      "answer": "c",
+      "explanation": "In 5.783, the hundredths place is the second digit after the decimal, which is 8.",
+      "hint": "Count tenths then hundredths to the right of the decimal."
+    }
+  ],
+  "Geometry Galaxy": [
+    {
+      "creature": "Angle Astronaut",
+      "prompt": "What is the sum of interior angles in a triangle?",
+      "options": {
+        "a": "90°",
+        "b": "120°",
+        "c": "180°",
+        "d": "360°"
+      },
+      "answer": "c",
+      "explanation": "Every triangle's interior angles add to 180 degrees.",
+      "hint": "Remember the triangle angle rule."
+    },
+    {
+      "creature": "Perimeter Pilot",
+      "prompt": "Find the perimeter of a rectangle with length 8 cm and width 3 cm.",
+      "options": {
+        "a": "11 cm",
+        "b": "16 cm",
+        "c": "22 cm",
+        "d": "24 cm"
+      },
+      "answer": "c",
+      "explanation": "Perimeter = 2*(8 + 3) = 22 cm.",
+      "hint": "Add all side lengths or double length + width."
+    },
+    {
+      "creature": "Area Android",
+      "prompt": "What is the area of a square with side 5 cm?",
+      "options": {
+        "a": "10 cm²",
+        "b": "15 cm²",
+        "c": "20 cm²",
+        "d": "25 cm²"
+      },
+      "answer": "d",
+      "explanation": "Area = side² = 5 × 5 = 25 cm².",
+      "hint": "Multiply the side by itself."
+    },
+    {
+      "creature": "Shape Shifter",
+      "prompt": "Which shape has exactly one pair of parallel sides?",
+      "options": {
+        "a": "Square",
+        "b": "Rectangle",
+        "c": "Trapezoid",
+        "d": "Rhombus"
+      },
+      "answer": "c",
+      "explanation": "A trapezoid has exactly one pair of parallel sides.",
+      "hint": "Think of a ladder leaning against a wall."
+    },
+    {
+      "creature": "Galaxy Guardian",
+      "prompt": "A right angle measures how many degrees?",
+      "options": {
+        "a": "45°",
+        "b": "90°",
+        "c": "120°",
+        "d": "180°"
+      },
+      "answer": "b",
+      "explanation": "Right angles form a square corner measuring 90 degrees.",
+      "hint": "Picture the corner of a screen."
+    },
+    {
+      "creature": "Nebula Naga",
+      "prompt": "A triangle with side lengths 5 cm, 5 cm, and 8 cm is what type of triangle?",
+      "options": {
+        "a": "Equilateral",
+        "b": "Isosceles",
+        "c": "Scalene",
+        "d": "Right"
+      },
+      "answer": "b",
+      "explanation": "Two sides are equal, so it is an isosceles triangle.",
+      "hint": "Count how many sides have the same length."
+    },
+    {
+      "creature": "Orbit Oracle",
+      "prompt": "What is the area of a triangle with base 10 cm and height 6 cm?",
+      "options": {
+        "a": "30 cm²",
+        "b": "32 cm²",
+        "c": "36 cm²",
+        "d": "60 cm²"
+      },
+      "answer": "a",
+      "explanation": "Area = 1/2 × base × height = 1/2 × 10 × 6 = 30 cm².",
+      "hint": "Multiply base and height, then take half."
+    },
+    {
+      "creature": "Comet Captain",
+      "prompt": "Estimate the circumference of a circle with radius 4 cm using π ≈ 3.14.",
+      "options": {
+        "a": "12.56 cm",
+        "b": "18.84 cm",
+        "c": "25.12 cm",
+        "d": "31.40 cm"
+      },
+      "answer": "c",
+      "explanation": "Circumference = 2πr = 2 × 3.14 × 4 = 25.12 cm.",
+      "hint": "Use the formula 2 × π × radius."
+    }
+  ],
+  "Measurement Mountain": [
+    {
+      "creature": "Unit Yeti",
+      "prompt": "Convert 3 kilometers to meters.",
+      "options": {
+        "a": "30 meters",
+        "b": "300 meters",
+        "c": "3000 meters",
+        "d": "30,000 meters"
+      },
+      "answer": "c",
+      "explanation": "1 km = 1000 m, so 3 km = 3000 m.",
+      "hint": "Multiply kilometers by 1000."
+    },
+    {
+      "creature": "Thermal Troll",
+      "prompt": "Water freezes at what temperature in Celsius?",
+      "options": {
+        "a": "-10°C",
+        "b": "0°C",
+        "c": "32°C",
+        "d": "100°C"
+      },
+      "answer": "b",
+      "explanation": "Water freezes at 0 degrees Celsius.",
+      "hint": "Think of the freezing point scale."
+    },
+    {
+      "creature": "Scale Sprite",
+      "prompt": "Estimate the mass of a textbook: 0.5 kg, 50 kg, 500 g, or 5000 g?",
+      "options": {
+        "a": "0.5 kg",
+        "b": "50 kg",
+        "c": "500 g",
+        "d": "5000 g"
+      },
+      "answer": "a",
+      "explanation": "A typical textbook weighs about half a kilogram (500 g).",
+      "hint": "Compare with everyday items."
+    },
+    {
+      "creature": "Chart Chimera",
+      "prompt": "If a line plot shows five hikers at 2 km and three hikers at 4 km, what is the total distance walked?",
+      "options": {
+        "a": "14 km",
+        "b": "22 km",
+        "c": "26 km",
+        "d": "32 km"
+      },
+      "answer": "b",
+      "explanation": "Multiply each group and add: (5 × 2) + (3 × 4) = 10 + 12 = 22 km.",
+      "hint": "Multiply each distance by the number of hikers, then add."
+    },
+    {
+      "creature": "Altitude Alpaca",
+      "prompt": "A recipe needs 250 milliliters of water. How many liters is that?",
+      "options": {
+        "a": "0.025 L",
+        "b": "0.25 L",
+        "c": "2.5 L",
+        "d": "25 L"
+      },
+      "answer": "b",
+      "explanation": "Divide by 1000: 250 mL = 0.25 L.",
+      "hint": "1 liter equals 1000 milliliters."
+    },
+    {
+      "creature": "Chrono Chieftain",
+      "prompt": "Convert 90 minutes into hours.",
+      "options": {
+        "a": "1.2 hours",
+        "b": "1.3 hours",
+        "c": "1.5 hours",
+        "d": "1.6 hours"
+      },
+      "answer": "c",
+      "explanation": "90 ÷ 60 = 1.5 hours.",
+      "hint": "Divide the minutes by 60."
+    },
+    {
+      "creature": "Gauge Griffin",
+      "prompt": "A thermometer reads 37°C. What does this suggest about the temperature?",
+      "options": {
+        "a": "It is freezing",
+        "b": "It is room temperature",
+        "c": "It is normal body temperature",
+        "d": "It is boiling"
+      },
+      "answer": "c",
+      "explanation": "37°C is the typical human body temperature.",
+      "hint": "Think about healthy body temperatures."
+    },
+    {
+      "creature": "Ration Raven",
+      "prompt": "How many milliliters are in 5 liters?",
+      "options": {
+        "a": "50 mL",
+        "b": "500 mL",
+        "c": "5000 mL",
+        "d": "50,000 mL"
+      },
+      "answer": "c",
+      "explanation": "Multiply liters by 1000: 5 × 1000 = 5000 mL.",
+      "hint": "There are 1000 milliliters in a liter."
+    }
+  ],
+  "Word Problem World": [
+    {
+      "creature": "Puzzle Pixie",
+      "prompt": "Leena buys 3 bracelets for RM12 each and gets a RM6 discount. How much does she pay?",
+      "options": {
+        "a": "RM30",
+        "b": "RM32",
+        "c": "RM36",
+        "d": "RM42"
+      },
+      "answer": "a",
+      "explanation": "3 × 12 = 36, minus 6 equals 30.",
+      "hint": "Calculate total cost, then subtract discount."
+    },
+    {
+      "creature": "River Riddle",
+      "prompt": "A tank holds 18 liters. If 6 liters are used each day, how many days until empty?",
+      "options": {
+        "a": "2 days",
+        "b": "3 days",
+        "c": "4 days",
+        "d": "6 days"
+      },
+      "answer": "b",
+      "explanation": "18 ÷ 6 = 3 days.",
+      "hint": "Divide volume by daily use."
+    },
+    {
+      "creature": "Market Mage",
+      "prompt": "Farid has RM50. He buys fruit for RM18 and books for RM22. How much is left?",
+      "options": {
+        "a": "RM8",
+        "b": "RM10",
+        "c": "RM12",
+        "d": "RM14"
+      },
+      "answer": "b",
+      "explanation": "18 + 22 = 40, so 50 - 40 = 10.",
+      "hint": "Add expenses first."
+    },
+    {
+      "creature": "Trail Tracker",
+      "prompt": "A cyclist travels 12 km in 40 minutes. What is the speed in km per hour?",
+      "options": {
+        "a": "18 km/h",
+        "b": "24 km/h",
+        "c": "30 km/h",
+        "d": "36 km/h"
+      },
+      "answer": "a",
+      "explanation": "40 minutes = 2/3 hour. Speed = 12 ÷ (2/3) = 18 km/h.",
+      "hint": "Convert minutes to hours first."
+    },
+    {
+      "creature": "Budget Bard",
+      "prompt": "If a school trip costs RM120 per student and the class raises RM2,880, how many students can go?",
+      "options": {
+        "a": "12",
+        "b": "18",
+        "c": "20",
+        "d": "24"
+      },
+      "answer": "d",
+      "explanation": "2,880 ÷ 120 = 24 students.",
+      "hint": "Use division with larger numbers."
+    },
+    {
+      "creature": "Festival Fairy",
+      "prompt": "Tickets cost RM4 each. Sara buys 5 tickets and receives a RM4 discount. How much does she pay?",
+      "options": {
+        "a": "RM16",
+        "b": "RM18",
+        "c": "RM20",
+        "d": "RM24"
+      },
+      "answer": "a",
+      "explanation": "5 × 4 = 20; subtract the RM4 discount to get RM16.",
+      "hint": "Find the total cost before subtracting the discount."
+    },
+    {
+      "creature": "Scroll Sage",
+      "prompt": "A team collects 240 stickers and shares them equally among 6 friends. How many stickers does each friend get?",
+      "options": {
+        "a": "30",
+        "b": "35",
+        "c": "40",
+        "d": "45"
+      },
+      "answer": "c",
+      "explanation": "240 ÷ 6 = 40 stickers per friend.",
+      "hint": "Divide the total by the number of friends."
+    },
+    {
+      "creature": "Harvest Herald",
+      "prompt": "A garden yields 120 oranges. After selling 45, the rest are packed evenly into 5 baskets. How many oranges per basket?",
+      "options": {
+        "a": "12",
+        "b": "15",
+        "c": "18",
+        "d": "25"
+      },
+      "answer": "b",
+      "explanation": "120 - 45 = 75 oranges; 75 ÷ 5 = 15 per basket.",
+      "hint": "Subtract the sold oranges before dividing."
+    }
+  ]
+}
