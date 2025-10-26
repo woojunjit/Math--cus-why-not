@@ -2,15 +2,23 @@
   "active_slot": "Slot 1",
   "slots": {
     "Slot 1": {
-      "player_name": "grammar",
-      "level": 1,
-      "xp": 50,
+      "player_name": null,
+      "level": 4,
+      "xp": 60,
       "badges": [
-        "Fractions Forest Master"
+        "Decimal Desert Master",
+        "Geometry Galaxy Master",
+        "Measurement Mountain Master",
+        "Word Problem World Master",
+        "Fractions Forest Master",
+        "Daily Star"
       ],
       "unlocked_lands": [
         "Fractions Forest",
-        "Decimal Desert"
+        "Decimal Desert",
+        "Geometry Galaxy",
+        "Measurement Mountain",
+        "Word Problem World"
       ],
       "hint_tokens": {
         "Fractions Forest": 3,
@@ -19,8 +27,45 @@
         "Measurement Mountain": 3,
         "Word Problem World": 3
       },
-      "last_hint_reset": "2025-10-20",
-      "avatar": "\ud83d\udef0\ufe0f Geometry Navigator"
+      "last_hint_reset": "2025-10-26",
+      "avatar": null,
+      "daily_challenge": {
+        "date_generated": "2025-10-26",
+        "land": "Fractions Forest",
+        "question_ids": [
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        "bonus_xp": 25,
+        "badge_reward": "Daily Star",
+        "completed": false,
+        "reward_claimed": false,
+        "completion_timestamp": null,
+        "completion_time_seconds": null
+      },
+      "daily_stats": {
+        "streak_current": 1,
+        "streak_best": 1,
+        "last_completion_date": "2025-10-25",
+        "fastest_completion_seconds": 32,
+        "total_completions": 1
+      },
+      "daily_history": [
+        {
+          "date": "2025-10-25",
+          "land": "Fractions Forest",
+          "seconds": 32,
+          "bonus_xp": 25,
+          "badge_reward": "Daily Star"
+        }
+      ],
+      "retry_status": {
+        "hearts": 3,
+        "last_depleted_at": null
+      }
     },
     "Slot 2": null,
     "Slot 3": null

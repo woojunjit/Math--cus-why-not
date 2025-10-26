@@ -38,6 +38,26 @@ COLOR_PALETTES = {
         "primary": "orange",
         "accent": "teal",
         "emoji": "📜"
+    },
+    "Ratio Reef": {
+        "primary": "aqua",
+        "accent": "coral",
+        "emoji": "🪸"
+    },
+    "Algebra Archipelago": {
+        "primary": "navy",
+        "accent": "gold",
+        "emoji": "🧮"
+    },
+    "Probability Peaks": {
+        "primary": "silver",
+        "accent": "indigo",
+        "emoji": "🎲"
+    },
+    "Logic Lagoon": {
+        "primary": "turquoise",
+        "accent": "lime",
+        "emoji": "🧠"
     }
 }
 

@@ -528,5 +528,325 @@
       "explanation": "120 - 45 = 75 oranges; 75 ÷ 5 = 15 per basket.",
       "hint": "Subtract the sold oranges before dividing."
     }
+  ],
+  "Ratio Reef": [
+    {
+      "creature": "Coral Captain",
+      "prompt": "A coral garden has a red to blue coral ratio of 3:2. If there are 18 red corals, how many blue corals are there?",
+      "options": {
+        "a": "9",
+        "b": "12",
+        "c": "15",
+        "d": "30"
+      },
+      "answer": "b",
+      "explanation": "For every 3 red corals there are 2 blue. Scale the ratio by 6 to get 18 red, so 2 × 6 = 12 blue corals.",
+      "hint": "Find the scale factor from 3 to 18."
+    },
+    {
+      "creature": "Seagrass Sage",
+      "prompt": "Students mix smoothie cups using a fruit to yogurt ratio of 4:1. How many cups of yogurt are needed for 28 cups of fruit?",
+      "options": {
+        "a": "5",
+        "b": "6",
+        "c": "7",
+        "d": "8"
+      },
+      "answer": "c",
+      "explanation": "28 ÷ 4 = 7 parts, so 1 part yogurt × 7 = 7 cups.",
+      "hint": "Divide the fruit amount by 4 to find each part."
+    },
+    {
+      "creature": "Current Cartographer",
+      "prompt": "A map scale shows 1 cm represents 5 km. How many kilometers are represented by 6.5 cm?",
+      "options": {
+        "a": "13 km",
+        "b": "25 km",
+        "c": "30 km",
+        "d": "32.5 km"
+      },
+      "answer": "d",
+      "explanation": "Multiply 6.5 by 5 to convert: 6.5 × 5 = 32.5 km.",
+      "hint": "Treat the scale as a ratio of centimeters to kilometers."
+    },
+    {
+      "creature": "Tide Technician",
+      "prompt": "A recipe calls for 2 cups of pineapple for every 3 cups of mango. How much pineapple is needed for 12 cups of mango?",
+      "options": {
+        "a": "6 cups",
+        "b": "8 cups",
+        "c": "10 cups",
+        "d": "18 cups"
+      },
+      "answer": "b",
+      "explanation": "Scale 3 cups of mango to 12 by multiplying by 4, so pineapple is 2 × 4 = 8 cups.",
+      "hint": "Set up a proportion 2/3 = x/12."
+    },
+    {
+      "creature": "Bubble Biologist",
+      "prompt": "A school has 120 students with a boys to girls ratio of 5:7. How many girls attend the school?",
+      "options": {
+        "a": "40",
+        "b": "50",
+        "c": "70",
+        "d": "84"
+      },
+      "answer": "c",
+      "explanation": "Total parts = 5 + 7 = 12. Each part equals 120 ÷ 12 = 10 students, so girls = 7 × 10 = 70.",
+      "hint": "Divide total students by the sum of ratio parts."
+    },
+    {
+      "creature": "Wave Weaver",
+      "prompt": "The ratio of green shells to purple shells is 2:5. If there are 35 purple shells, how many total shells are there?",
+      "options": {
+        "a": "14",
+        "b": "21",
+        "c": "49",
+        "d": "63"
+      },
+      "answer": "c",
+      "explanation": "Purple shells represent 5 parts. 35 ÷ 5 = 7 per part. Total parts = 2 + 5 = 7, so 7 × 7 = 49 shells.",
+      "hint": "Find the value of one part, then multiply by total parts."
+    }
+  ],
+  "Algebra Archipelago": [
+    {
+      "creature": "Equation Explorer",
+      "prompt": "Solve for x: x + 7 = 19.",
+      "options": {
+        "a": "10",
+        "b": "11",
+        "c": "12",
+        "d": "26"
+      },
+      "answer": "c",
+      "explanation": "Subtract 7 from both sides: 19 - 7 = 12, so x = 12.",
+      "hint": "Undo the addition by subtracting 7."
+    },
+    {
+      "creature": "Island Interpreter",
+      "prompt": "Write an expression for 'five less than twice a number n'.",
+      "options": {
+        "a": "2n - 5",
+        "b": "5 - 2n",
+        "c": "2(n - 5)",
+        "d": "n/2 - 5"
+      },
+      "answer": "a",
+      "explanation": "Twice a number is 2n; five less means subtract 5 giving 2n - 5.",
+      "hint": "Start with 2n, then subtract 5."
+    },
+    {
+      "creature": "Balance Buccaneer",
+      "prompt": "Solve 3x - 4 = 17.",
+      "options": {
+        "a": "5",
+        "b": "6",
+        "c": "7",
+        "d": "9"
+      },
+      "answer": "c",
+      "explanation": "Add 4 to both sides to get 3x = 21, then divide by 3 to get x = 7.",
+      "hint": "Undo subtraction first, then division."
+    },
+    {
+      "creature": "Coordinate Captain",
+      "prompt": "Which ordered pair satisfies y = 2x - 1?",
+      "options": {
+        "a": "(1, 1)",
+        "b": "(2, 3)",
+        "c": "(3, 5)",
+        "d": "(4, 9)"
+      },
+      "answer": "c",
+      "explanation": "Substitute x = 3: y = 2(3) - 1 = 5, so (3, 5) lies on the line.",
+      "hint": "Plug each x into the equation to see which y matches."
+    },
+    {
+      "creature": "Expression Explorer",
+      "prompt": "Simplify 4(x + 3).",
+      "options": {
+        "a": "4x + 3",
+        "b": "4x + 7",
+        "c": "4x + 12",
+        "d": "x + 12"
+      },
+      "answer": "c",
+      "explanation": "Distribute 4: 4 × x = 4x and 4 × 3 = 12, so 4x + 12.",
+      "hint": "Multiply the outside number by each term inside the parentheses."
+    },
+    {
+      "creature": "Treasure Theorist",
+      "prompt": "Solve for x: 2(x - 5) = 6.",
+      "options": {
+        "a": "1",
+        "b": "3",
+        "c": "5",
+        "d": "8"
+      },
+      "answer": "d",
+      "explanation": "Divide both sides by 2 to get x - 5 = 3, then add 5 to get x = 8.",
+      "hint": "Undo multiplication before subtraction."
+    }
+  ],
+  "Probability Peaks": [
+    {
+      "creature": "Chance Chieftain",
+      "prompt": "A bag has 3 red, 2 blue, and 5 green marbles. What is the probability of drawing a blue marble?",
+      "options": {
+        "a": "1/10",
+        "b": "1/5",
+        "c": "1/2",
+        "d": "2/5"
+      },
+      "answer": "b",
+      "explanation": "There are 10 marbles total. Blue marbles = 2, so probability = 2/10 = 1/5.",
+      "hint": "Divide favorable outcomes by total outcomes."
+    },
+    {
+      "creature": "Forecast Falcon",
+      "prompt": "A fair number cube is rolled. What is the probability of rolling an even number?",
+      "options": {
+        "a": "1/6",
+        "b": "1/3",
+        "c": "1/2",
+        "d": "2/3"
+      },
+      "answer": "c",
+      "explanation": "Even outcomes are 2, 4, 6 (three outcomes) out of six total, so 3/6 = 1/2.",
+      "hint": "List the even sides on the cube."
+    },
+    {
+      "creature": "Summit Statistician",
+      "prompt": "A spinner is divided into 8 equal sections numbered 1-8. What is the probability of landing on a number greater than 5?",
+      "options": {
+        "a": "1/4",
+        "b": "3/8",
+        "c": "1/2",
+        "d": "5/8"
+      },
+      "answer": "b",
+      "explanation": "Numbers greater than 5 are 6, 7, 8 (three outcomes). Probability = 3/8.",
+      "hint": "Count how many sections meet the condition."
+    },
+    {
+      "creature": "Data Dragon",
+      "prompt": "A weather report states there is a 60% chance of rain. What is the probability written as a fraction in simplest form?",
+      "options": {
+        "a": "3/5",
+        "b": "2/3",
+        "c": "5/8",
+        "d": "6/10"
+      },
+      "answer": "a",
+      "explanation": "60% = 60/100 which simplifies by dividing by 20 to 3/5.",
+      "hint": "Write the percent over 100 then reduce."
+    },
+    {
+      "creature": "Experiment Eagle",
+      "prompt": "A coin is flipped 20 times with 11 heads and 9 tails. What is the experimental probability of heads?",
+      "options": {
+        "a": "9/20",
+        "b": "10/20",
+        "c": "11/20",
+        "d": "12/20"
+      },
+      "answer": "c",
+      "explanation": "Experimental probability = number of heads divided by total flips = 11/20.",
+      "hint": "Use the data collected, not theoretical results."
+    },
+    {
+      "creature": "Trail Tracker",
+      "prompt": "Two coins are flipped. What is the probability of getting exactly one head?",
+      "options": {
+        "a": "1/4",
+        "b": "1/2",
+        "c": "3/4",
+        "d": "1"
+      },
+      "answer": "b",
+      "explanation": "Possible outcomes: HH, HT, TH, TT. Exactly one head occurs in HT and TH (2 of 4 outcomes) = 1/2.",
+      "hint": "List all ordered pairs of results."
+    }
+  ],
+  "Logic Lagoon": [
+    {
+      "creature": "Pattern Protector",
+      "prompt": "What is the next number in the pattern 3, 6, 12, 24, ...?",
+      "options": {
+        "a": "36",
+        "b": "42",
+        "c": "44",
+        "d": "48"
+      },
+      "answer": "d",
+      "explanation": "Each term doubles the previous one, so 24 × 2 = 48.",
+      "hint": "Check how each term changes from the one before it."
+    },
+    {
+      "creature": "Riddle Ray",
+      "prompt": "If all clams are shells and some shells are pink, which statement must be true?",
+      "options": {
+        "a": "All shells are clams",
+        "b": "All clams are pink",
+        "c": "Some clams might be pink",
+        "d": "No clams are pink"
+      },
+      "answer": "c",
+      "explanation": "All clams are shells, and some shells are pink, so it is possible that some clams are pink.",
+      "hint": "Use Venn diagrams to visualize relationships."
+    },
+    {
+      "creature": "Puzzle Paladin",
+      "prompt": "Which statement is the converse of 'If it is raining, then practice is indoors'?",
+      "options": {
+        "a": "If it is not raining, practice is outdoors",
+        "b": "If practice is indoors, then it is raining",
+        "c": "Practice is indoors only if it is raining",
+        "d": "Practice is indoors if it is raining"
+      },
+      "answer": "b",
+      "explanation": "The converse swaps hypothesis and conclusion: 'If practice is indoors, then it is raining.'",
+      "hint": "Switch the order of the original if-then statement."
+    },
+    {
+      "creature": "Reasoning Ranger",
+      "prompt": "Choose the true statement for the pattern of shapes: triangle, square, pentagon, hexagon, ...",
+      "options": {
+        "a": "The number of sides decreases by one each time",
+        "b": "Each shape has one more side than the previous",
+        "c": "Each shape has twice as many sides as the previous",
+        "d": "Each shape is rotated 90 degrees"
+      },
+      "answer": "b",
+      "explanation": "The sequence increases the number of sides by one each time (3, 4, 5, 6...).",
+      "hint": "Count the sides in order."
+    },
+    {
+      "creature": "Logic Lurker",
+      "prompt": "If statement p is 'The lantern is lit' and q is 'The path is safe', what does the conditional 'If the path is not safe, then the lantern is not lit' represent?",
+      "options": {
+        "a": "The inverse",
+        "b": "The converse",
+        "c": "The contrapositive",
+        "d": "A biconditional"
+      },
+      "answer": "c",
+      "explanation": "Switching and negating both parts forms the contrapositive: if not q, then not p.",
+      "hint": "Compare with the original statement 'If the lantern is lit, then the path is safe'."
+    },
+    {
+      "creature": "Inference Illusionist",
+      "prompt": "A statement is true for 1, 2, 3, and 4. Which reasoning justifies claiming it is true for all whole numbers?",
+      "options": {
+        "a": "Deductive reasoning",
+        "b": "Inductive reasoning",
+        "c": "Contradiction",
+        "d": "Counterexample"
+      },
+      "answer": "b",
+      "explanation": "Observing a pattern from specific cases and extending it is inductive reasoning.",
+      "hint": "Think about how patterns lead to general rules."
+    }
   ]
 }

@@ -46,12 +46,21 @@
   - **Time zone inconsistencies** → store UTC dates, convert on display.
   - **Content exhaustion** → build challenge question pools per land with difficulty tiers.
 
-## Phase 3: Future Enhancements
+## Phase 3: Future Enhancements (Initiated 2025-10-25)
 
-- **Leaderboards**: Local file sync, optional cloud integration (require auth strategy).
-- **Narration**: Text-to-speech using `pyttsx3` or OS APIs; toggle in settings.
-- **Mini-games**: Quick math reflex games between quests to maintain engagement.
-- **Mobile-ready layout**: Evaluate Kivy/PyQt for cross-platform deployment.
+- **Leaderboards**
+  - Implement local `leaderboard_data.json` with top XP, streaks, and completion times.
+  - Surface leaderboard in console and GUI (`gui_app/leaderboard_panel.py`) with paging support.
+  - Plan hooks for optional cloud sync (Phase 3.2).
+- **Narration**
+  - Integrate `pyttsx3` wrapper in `audio/narration.py` with configurable voice and rate.
+  - Add narration toggles to console settings and GUI title screen.
+- **Mini-games**
+  - Prototype reflex mini-game in `mini_games/reflex_math.py` reusable in console/GUI.
+  - Log mini-game scores to leaderboard for variety metrics.
+- **Mobile-ready layout**
+  - Begin feasibility spike comparing Tkinter tweaks vs `kivy` starter branch.
+  - Document layout constraints and control schemes for touch devices.
 
 ---
 _Last updated: 2025-10-20_

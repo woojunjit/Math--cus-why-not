@@ -43,5 +43,41 @@
       "Check answers for reasonableness"
     ],
     "example_walkthrough": "A villager describes buying supplies with discounts, guiding you to set up and solve equations to find totals."
+  },
+  "Ratio Reef": {
+    "story": "Dive into Ratio Reef where coral caretakers balance colorful sea gardens using ratios and rates.",
+    "learning_objectives": [
+      "Interpret ratios and rate language",
+      "Solve proportion problems with tables and tape diagrams",
+      "Scale recipes and maps using equivalent ratios"
+    ],
+    "example_walkthrough": "A reef ranger doubles a coral arrangement, showing that 3 red corals to 2 blue corals becomes 6 to 4 when scaled."
+  },
+  "Algebra Archipelago": {
+    "story": "Sail through Algebra Archipelago where island scholars write expressions to decode treasure clues.",
+    "learning_objectives": [
+      "Translate word phrases into algebraic expressions",
+      "Solve one-step and two-step equations",
+      "Graph simple relationships on the coordinate plane"
+    ],
+    "example_walkthrough": "An island elder demonstrates solving 2x + 3 = 11 by undoing operations step by step." 
+  },
+  "Probability Peaks": {
+    "story": "Climb Probability Peaks where avalanche forecasters predict outcomes with data and chance models.",
+    "learning_objectives": [
+      "Describe probabilities as fractions, decimals, and percents",
+      "Create and analyze simple experiments",
+      "Use probability to make fair decisions"
+    ],
+    "example_walkthrough": "A summit scientist rolls a number cube 12 times, comparing experimental results to the expected 1 out of 6 chance."
+  },
+  "Logic Lagoon": {
+    "story": "Logic Lagoon's puzzle guardians guard gates that open only when patterns and arguments are sound.",
+    "learning_objectives": [
+      "Recognize number and shape patterns",
+      "Construct logical arguments using evidence",
+      "Critique reasoning for flaws"
+    ],
+    "example_walkthrough": "A lagoon oracle reveals a pattern that doubles then subtracts one, guiding you to predict the next mosaic tile number."
   }
 }

@@ -1,6 +1,7 @@
 import os
 import sys
 from pathlib import Path
+from time import perf_counter
 
 from art_assets import (
     AVATAR_OPTIONS,
@@ -40,6 +41,16 @@ from game_utils import (
     set_active_slot,
     default_profile,
     LANDS,
+    refresh_daily_challenge,
+    get_daily_challenge_questions,
+    mark_daily_completion,
+    claim_daily_reward,
+    RETRY_MAX_HEARTS,
+    get_retry_hearts,
+    consume_retry_heart,
+    retry_cooldown_remaining,
+    load_leaderboard,
+    sync_leaderboard,
 )
 
 LAND_ORDER = LANDS
@@ -59,6 +70,100 @@ def display_title():
     clear_console()
     render_title_banner()
     print("Welcome to MathQuest6: The Adventure of Numbers!\n")
+
+
+def show_leaderboard(store):
+    sync_leaderboard(store)
+    board = load_leaderboard()
+    entries = board.get("entries", [])
+    clear_console()
+    print("🏆 MathQuest6 Leaderboard 🏆\n")
+    if not entries:
+        print("No adventurers recorded yet. Complete quests to claim a spot!\n")
+        press_enter()
+        return
+    print(f"Updated: {board.get('updated_at', 'N/A')}\n")
+    print("Rank | Adventurer       | Lv | XP  | Badges | Best Streak | Daily Clears")
+    print("-----+-------------------+----+-----+--------+-------------+--------------")
+    for index, entry in enumerate(entries, start=1):
+        name = entry.get("player_name", "Hero")[:17].ljust(17)
+        level = str(entry.get("level", 1)).rjust(2)
+        xp = str(entry.get("xp", 0)).rjust(4)
+        badges = str(entry.get("badge_count", 0)).rjust(6)
+        streak = str(entry.get("streak_best", 0)).rjust(11)
+        clears = str(entry.get("total_dailies", 0)).rjust(12)
+        print(f"{index:>4} | {name} | {level} | {xp} | {badges} | {streak} | {clears}")
+    press_enter()
+
+
+def attempt_daily_challenge(store, profile, quiz_bank):
+    hearts = get_retry_hearts(profile)
+    cooldown_seconds = retry_cooldown_remaining(profile) if hearts <= 0 else 0
+    if hearts <= 0 and cooldown_seconds > 0:
+        minutes = cooldown_seconds // 60
+        seconds = cooldown_seconds % 60
+        print(
+            "\nDaily challenge unavailable. All retry hearts are depleted."
+            f" Rest for {minutes:02d}:{seconds:02d} before trying again.\n"
+        )
+        press_enter()
+        return None
+    refresh_daily_challenge(profile, quiz_bank)
+    land, questions = get_daily_challenge_questions(profile, quiz_bank)
+    if not land:
+        print("\nDaily challenge is not ready yet. Come back later!\n")
+        press_enter()
+        return None
+    if not questions:
+        print("\nDaily challenge has no questions configured right now. Try again after updating quiz data.\n")
+        press_enter()
+        return None
+    print("\nEmbarking on today's daily challenge!\n")
+    start_time = perf_counter()
+    success = battle_quiz(profile, land, questions)
+    elapsed_seconds = int(perf_counter() - start_time)
+    if success:
+        newly_completed = mark_daily_completion(profile, elapsed_seconds)
+        save_profiles(store)
+        if newly_completed:
+            print("\nDaily challenge complete! Visit the map to claim your reward.\n")
+        else:
+            print("\nDaily challenge already marked as complete for today.\n")
+    else:
+        print("\nDaily challenge attempt ended early. Regroup and try again!\n")
+        remaining_hearts = consume_retry_heart(profile)
+        save_profiles(store)
+        if remaining_hearts > 0:
+            print(f"Retry hearts remaining: {remaining_hearts}/{RETRY_MAX_HEARTS}.")
+        else:
+            cooldown_seconds = retry_cooldown_remaining(profile)
+            minutes = cooldown_seconds // 60
+            seconds = cooldown_seconds % 60
+            print(
+                "All retry hearts spent. Rest for "
+                f"{minutes:02d}:{seconds:02d} before your next attempt."
+            )
+    press_enter()
+    return success
+
+
+def claim_daily_reward_console(store, profile):
+    reward = claim_daily_reward(profile)
+    if reward is None:
+        print("\nNo reward available to claim. Complete the daily challenge first.\n")
+        press_enter()
+        return
+    bonus, badge = reward
+    if bonus:
+        print(f"\n{XP_EMOJI} Bonus XP awarded: +{bonus}!")
+    if badge:
+        print(f"{BADGE_EMOJI} Special badge earned: {badge}!")
+    if not bonus and not badge:
+        print("\nReward claimed! (No additional bonus configured today.)")
+    else:
+        print("Reward claimed! Keep the streak going.")
+    save_profiles(store)
+    press_enter()
 
 
 def select_profile_slot(store):
@@ -255,7 +360,35 @@ def show_lesson(lessons, land):
 def choose_land(profile):
     while True:
         render_map(profile)
-        print("\nSelect a land to explore or type 'profile' to review your hero:")
+        challenge = profile.get("daily_challenge") or {}
+        stats = profile.get("daily_stats") or {}
+        land = challenge.get("land")
+        emoji = COLOR_PALETTES.get(land, {}).get("emoji", "⭐") if land else "⭐"
+        hearts_available = get_retry_hearts(profile)
+        cooldown_seconds = retry_cooldown_remaining(profile) if hearts_available == 0 else 0
+        if cooldown_seconds:
+            minutes = cooldown_seconds // 60
+            seconds = cooldown_seconds % 60
+            cooldown_text = f"Cooldown {minutes:02d}:{seconds:02d}"
+        else:
+            cooldown_text = "Ready"
+        if land:
+            status_parts = ["Completed" if challenge.get("completed") else "Ready"]
+            status_parts.append("Reward claimed" if challenge.get("reward_claimed") else "Reward pending")
+            status_text = ", ".join(status_parts)
+        else:
+            status_text = "Not generated yet"
+        bonus = challenge.get("bonus_xp", 0)
+        streak_current = stats.get("streak_current", 0)
+        streak_best = stats.get("streak_best", 0)
+        print(
+            "\nDaily Challenge: "
+            f"{emoji} {land or 'TBD'} — {status_text} | Bonus XP {bonus}"
+            f" | Streak {streak_current} (best {streak_best})"
+        )
+        print(f"Retry Hearts: {hearts_available}/{RETRY_MAX_HEARTS} — {cooldown_text}")
+        print("Commands: number to enter land, 'daily' to attempt, 'claim' to collect reward, 'profile' to review, 'quit' to exit.")
+        print("\nSelect a land to explore or choose a command:")
         for idx, land in enumerate(LAND_ORDER, start=1):
             locked = land not in profile["unlocked_lands"]
             label = f"{idx}. {land}{' (locked)' if locked else ''}"
@@ -264,12 +397,21 @@ def choose_land(profile):
         if choice == "profile":
             show_profile(profile)
             continue
+        if choice == "daily":
+            return "daily", None
+        if choice == "claim":
+            return "claim", None
+        if choice == "leaderboard":
+            show_leaderboard(store)
+            continue
+        if choice == "quit":
+            return "quit", None
         if choice.isdigit():
             index = int(choice) - 1
             if 0 <= index < len(LAND_ORDER):
                 land_name = LAND_ORDER[index]
                 if land_name in profile["unlocked_lands"]:
-                    return land_name
+                    return "land", land_name
                 print("That land is still locked. Complete earlier quests first!\n")
             else:
                 print("Please choose a valid land number.\n")
@@ -293,16 +435,23 @@ def main():
     lessons, quizzes = read_lessons_and_quizzes()
 
     while True:
-        land = choose_land(profile)
-        show_lesson(lessons, land)
-        success = battle_quiz(profile, land, quizzes[land])
-        save_profiles(store)
-        if not success:
-            print("Take a break, review lessons, and return stronger!\n")
-            press_enter()
-
-        again = input("Return to map for another quest? (y/n): ").strip().lower()
-        if again != "y":
+        action, payload = choose_land(profile)
+        if action == "land" and payload:
+            land = payload
+            show_lesson(lessons, land)
+            success = battle_quiz(profile, land, quizzes[land])
+            save_profiles(store)
+            if not success:
+                print("Take a break, review lessons, and return stronger!\n")
+                press_enter()
+            continue
+        if action == "daily":
+            attempt_daily_challenge(store, profile, quizzes)
+            continue
+        if action == "claim":
+            claim_daily_reward_console(store, profile)
+            continue
+        if action == "quit":
             break
 
     print("\nThanks for playing MathQuest6! Keep your adventurous spirit alive!\n")
